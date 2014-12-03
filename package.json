@@ -1,0 +1,19 @@
+{
+  "name": "sharedjs-core",
+  "version": "0.1.0",
+  "description": "SharedJS Core JS Library",
+  "private": true,
+  "author": "Karaoak",
+  "dependencies": {
+    "backbone": "~0.9.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "chai": "~1.9.1",
+    "sinon": "~1.10.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
