@@ -1,17 +1,19 @@
 var proxy = require("proxy");
 
-var Backbone = proxy.backbone,
-    log = proxy.logger;
+var BaseModel = require("core/models/BaseModel");
 
-log('Cat module loaded');
+module.exports = BaseModel.extend({
 
-module.exports = Backbone.Model.extend({
+    logging: true,
+    logging_prefix: 'Cat',
+    self: this,
 
     initialize: function(){
-        log('Model cat is created');
+        this.log('Model is created');
     },
 
-    sayHello : function(){
+    sayHello: function() {
+        this.log('sayHello');
         return "Miaauw!";
     }
 });
