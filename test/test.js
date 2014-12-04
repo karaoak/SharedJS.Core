@@ -2,8 +2,8 @@ var proxy = require('../utils/proxy');
 
 var expect = require('chai').expect,
     sinon = require('sinon'),
-    User = require('../src/models/User'),
-    Cat = require('../src/models/animals/Cat');
+    User = require('../src/models/humans/User'),
+    Donkey = require('../src/models/animals/Donkey');
 
 var user = new User();
 
@@ -22,36 +22,36 @@ describe("Trying out the test libraries", function () {
         }); });
 });
 
-var cat = new Cat();
+var donkey = new Donkey();
 
 describe("Trying out the test libraries", function () {
     describe("Chai", function () {
         it("should be equal using 'expect'", function () {
-            expect(cat.sayHello()).to.equal("Miaauw!");
+            expect(donkey.sayHello()).to.equal("Iaah!");
         }); });
     describe("Sinon.JS", function () {
         it("should report spy called", function () {
-            var helloSpy = sinon.spy(cat, 'sayHello');
+            var helloSpy = sinon.spy(donkey, 'sayHello');
             expect(helloSpy.called).to.be.false;
-            cat.sayHello();
+            donkey.sayHello();
             expect(helloSpy.called).to.be.true;
-            cat.sayHello.restore();
+            donkey.sayHello.restore();
         }); });
 });
 
-var cat2 = new Cat();
+var donkey2 = new Donkey();
 
 describe("Trying out the test libraries", function () {
     describe("Chai", function () {
         it("should be equal using 'expect'", function () {
-            expect(cat2.sayHello()).to.equal("Miaauw!");
+            expect(donkey2.sayHello()).to.equal("Iaah!");
         }); });
     describe("Sinon.JS", function () {
         it("should report spy called", function () {
-            var helloSpy = sinon.spy(cat2, 'sayHello');
+            var helloSpy = sinon.spy(donkey2, 'sayHello');
             expect(helloSpy.called).to.be.false;
-            cat2.sayHello();
+            donkey2.sayHello();
             expect(helloSpy.called).to.be.true;
-            cat2.sayHello.restore();
+            donkey2.sayHello.restore();
         }); });
 });
