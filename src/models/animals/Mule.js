@@ -3,20 +3,16 @@ var proxy = require("proxy");
 var Backbone = proxy.backbone,
     log = proxy.logger;
 
-var dispatcher = require("core/dispatcher"),
-    state = require("core/state");
-
-log('Donkey module loaded');
+log('Mule module loaded');
 
 module.exports = Backbone.Model.extend({
 
     initialize: function() {
-        log('Model Donkey is created');
+        log('Model Mule is created');
     },
 
     sayHello: function() {
-        state.setNormal();
-        return "Iaah!";
+        return "Iaahihi!";
     }
 });
 

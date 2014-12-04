@@ -1,7 +1,8 @@
 var proxy = require("proxy");
 
 var _ = proxy._,
-    log = proxy.logger;
+    log = proxy.logger,
+    persist = require("core/persist");
     dispatcher = require("core/dispatcher");
 
 var STATE_NORMAL = 1,
@@ -19,16 +20,19 @@ var _state = STATE_NORMAL,
     _playback = PLAYBACK_INTERRUPTED;
 
 exports.setNormal = function() {
+    persist.unset('state');
     exports.set(STATE_NORMAL);
     dispatcher.trigger('STATE_NORMAL');
 };
 
 exports.setAlerted = function() {
+    persist.set('state', 'ALERT');
     exports.set(STATE_ALERTED);
     dispatcher.trigger('STATE_ALERTED');
 };
 
 exports.setEmergency = function() {
+    persist.set('state', 'EMERGENCY');
     exports.set(STATE_EMERGENCY);
     dispatcher.trigger('STATE_EMERGENCY');
 };

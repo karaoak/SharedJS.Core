@@ -2,56 +2,23 @@ var proxy = require('../utils/proxy');
 
 var expect = require('chai').expect,
     sinon = require('sinon'),
-    User = require('../src/models/humans/User'),
-    Donkey = require('../src/models/animals/Donkey');
+    Mule = require('../src/models/animals/Mule');
+   //TODO: For other models: http://lostechies.com/derickbailey/2014/02/20/how-i-work-around-the-require-problem-in-nodejs/
 
-var user = new User();
+var mule = new Mule();
 
-describe("Trying out the test libraries", function () {
+describe("Trying out the test libraries", function() {
     describe("Chai", function () {
-        it("should be equal using 'expect'", function () {
-            expect(user.sayHello()).to.equal("Hello");
+        it("should be equal using 'expect'", function() {
+            expect(mule.sayHello()).to.equal("Iaahihi!");
         }); });
-    describe("Sinon.JS", function () {
-        it("should report spy called", function () {
-            var helloSpy = sinon.spy(user, 'sayHello');
+    describe("Sinon.JS", function() {
+        it("should report spy called", function() {
+            var helloSpy = sinon.spy(mule, 'sayHello');
             expect(helloSpy.called).to.be.false;
-            user.sayHello();
+            mule.sayHello();
             expect(helloSpy.called).to.be.true;
-            user.sayHello.restore();
-        }); });
-});
-
-var donkey = new Donkey();
-
-describe("Trying out the test libraries", function () {
-    describe("Chai", function () {
-        it("should be equal using 'expect'", function () {
-            expect(donkey.sayHello()).to.equal("Iaah!");
-        }); });
-    describe("Sinon.JS", function () {
-        it("should report spy called", function () {
-            var helloSpy = sinon.spy(donkey, 'sayHello');
-            expect(helloSpy.called).to.be.false;
-            donkey.sayHello();
-            expect(helloSpy.called).to.be.true;
-            donkey.sayHello.restore();
-        }); });
-});
-
-var donkey2 = new Donkey();
-
-describe("Trying out the test libraries", function () {
-    describe("Chai", function () {
-        it("should be equal using 'expect'", function () {
-            expect(donkey2.sayHello()).to.equal("Iaah!");
-        }); });
-    describe("Sinon.JS", function () {
-        it("should report spy called", function () {
-            var helloSpy = sinon.spy(donkey2, 'sayHello');
-            expect(helloSpy.called).to.be.false;
-            donkey2.sayHello();
-            expect(helloSpy.called).to.be.true;
-            donkey2.sayHello.restore();
-        }); });
+            mule.sayHello.restore();
+        });
+    });
 });
