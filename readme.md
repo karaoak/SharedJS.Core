@@ -28,7 +28,7 @@ Setting up this project would require the following:
 	$ npm install
 	
 ####proxy shim
-Apart from that to load are dependencies via node require, we need a shim for Mocha testing.
+Apart from that to load our dependencies via node require, we need a shim for Mocha testing.
 To achieve this, we made a very cheap shim leveraging the way node uses node_modules as a search path when searching for modules. For this reason in node_modules we create a custom proxy.js which serves as a proxy of its own for our local project utils/proxy.js module.
 We explicitly added this file to git while ignoring everything else inside the node_modules folder.
 
