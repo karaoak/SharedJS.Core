@@ -17,7 +17,7 @@ Share as many code as possible in both Web and Mobile JS applications. This PoC 
 * Keep business logic in one place
 * Unit test business logic once
 * Leverage context specific technologies:
-	* HTML5 BB Web App:It should be possible to use BB plugins like LayoutManager + Stickit
+	* HTML5 BB Web App: It should be possible to use BB plugins like LayoutManager + Stickit
 	* Ti Alloy App: It should be possible to use Alloy views and Alloy MV binding.
 * Keep it very simple! With very little, and no exotic, dependencies.
 
