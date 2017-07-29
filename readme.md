@@ -8,7 +8,8 @@ CommonJS Mocha testable shared JavaScript library. This project is a dependency 
 Share as many code as possible in both Web and Mobile JS applications. This PoC library is set up in such a way that e.g. the same business logic and state, but e.g. different persistency, audioplayer or Google analytics implementations can be applied in both web and app projects.
 
 ###Why a shared JS codebase
-* Just like we use Titanium to develop apps for both iOS + Android, why not use JS to …
+
+* Just like we use Titanium to develop apps for both iOS + Android, why not use JS to …
 * Take away inconsistencies between mobile app and web app logic.
 * Keep things DRY, why write something in JS twice?
 * Reduce TCO. Cut costs for both initial development + AM
@@ -45,7 +46,7 @@ Either use the repository grunt tasks to test the library or use.
 Please find a list of the main libraries and modules used in this project:
 
 * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
-* [Mocha](http://visionmedia.github.io/mocha/)
+* [Mocha](http://mochajs.org/)
 
 
 For more information see my slides on [Speakerdeck](https://speakerdeck.com/karaoak/shared-web-plus-ti-app-javascript-codebase)
